@@ -69,7 +69,7 @@ for i in range(3):
     true_centroids[i,:] = mean(iris.data[mask,:])
 
 
-print sum(labels == iris.target)/float(N), " is percent accuracy assuming K = 3"
+print(sum(labels == iris.target)/float(N), " is percent accuracy assuming K = 3")
 
-print centroids, "are the predicted centers of mass\n"
-print true_centroids, "are the real centers of mass"
+print(centroids, "are the predicted centers of mass\n")
+print(true_centroids, "are the real centers of mass")

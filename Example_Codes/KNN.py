@@ -31,7 +31,8 @@ def knn_vdist(k, c, data, labels, new_data, distance):
         new_labels[i] = np.argmax(classes)
     return new_labels
 
-x = range(len(data['data']))
+data = load_iris()
+x = np.arange(len(data['data']))
 np.random.shuffle(x)
 c = len(set(data['target']))
 train_data = data['data'][x[:75]]
@@ -44,4 +45,4 @@ for i in range(len(new_labels)):
     check  = new_labels[i] - data['target'][x[75:]][i]
     if check == 0:
         correct +=1
-print "got ", 100.*correct/75., "is the percent accuracy"
+print("got ", 100.*correct/75., "is the percent accuracy")

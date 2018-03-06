@@ -10,8 +10,8 @@ import matplotlib.pyplot as plt
 #x_j,0 = 0
 #w_i(t) = weight i at time t
 
-print "This example creates cases and controls in a 2D plane where a line with a slope of 1 separates them\n\
-Then we use the perceptron algorithm to classify test data"
+print("This example creates cases and controls in a 2D plane where a line with a slope of 1 separates them\n\
+Then we use the perceptron algorithm to classify test data")
 
 dim = 2
 t = 1
@@ -68,7 +68,7 @@ for i in range(n_retest):
 ax[1].set_title("Perceptron Output on Test Data")
 
 accuracy = float(len(correct))/n_retest
-print accuracy, "is percentage correct on test set"
+print(accuracy, "is percentage correct on test set")
 
 for i in range(n_samples):
     if c_test[i] == 1:

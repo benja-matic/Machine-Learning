@@ -58,8 +58,8 @@ def perceptron_learning_1v(activity, w, n, t, max_iter):
         u = np.multiply((won - y), n) #update weights with
         w += u
         i += 1
-        print "update by: ", u, "\n"
-        print w, "\n"
+        print("update by: ", u, "\n")
+        print(w, "\n")
     return w, i
 
 def learn_active_1v(w, n, t, max_iter):
@@ -114,7 +114,7 @@ def learn_inactive_1v(w, n, t, max_iter):
 
 T = N
 K = 10.
-print "We have a network of N binary excitatory neurons.\n\
+print("We have a network of N binary excitatory neurons.\n\
 We want to train the network to learn an attractor state eta (written 'n')\n\
 The attractor state is a bit string of length N\n\
 Learning this attractor state is equivalent to N perceptron probems\n\
@@ -124,7 +124,7 @@ Weights matrix is directed and generally asymmetric. Incoming connections are gi
 row_i*eta --> eta_i for all i in network is a learned attractor state \n\
 This simulation learns a single attractor state\n\
 When a neuron fails, you increase the threshold and keep learning.\n\
-You put a ceiling on iterations or threshold height."
+You put a ceiling on iterations or threshold height.")
 
 start_time = TIME.time()
 W2 = np.zeros((N, N))
@@ -142,7 +142,7 @@ for i in range(len(n)):
 
 
 stop_time = TIME.time()
-print stop_time - start_time, "is time spent learning"
+print(stop_time - start_time, "is time spent learning")
 
 checks = np.zeros(len(n))
 vals = np.zeros(len(n))
@@ -157,8 +157,8 @@ for i in range(len(n)):
             checks[i] = 1
 
 
-print 100.*sum(checks)/N, "is precent accuracy"
-print "here's the weights matrix"
+print(100.*sum(checks)/N, "is precent accuracy")
+print("here's the weights matrix")
 
 a = plt.imshow(W2)
 plt.colorbar(a)
