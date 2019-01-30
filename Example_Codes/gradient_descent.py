@@ -14,19 +14,27 @@ def batch_gradient_V(theta, X, y, alpha, m):
     return theta, J, gradient
 
 
+#hyothesis function, args(data and parameters)
+# def batch_gradient(h_func, h_args, alpha, y, m):
+#     y_hat = h_func(h_args)
+#     loss = y_hat - y
+#
+#
+# def conjugate_gradient(theta)
+
 m = 100 #number of training examples
 x_axis = np.arange(m)
 true_slope = 8.456789
 true_intercept = 7.
 X = np.zeros((m, 2))
-y = (x_axis*true_slope) + true_intercept + np.random.normal(0, 2, m)
+y = (x_axis*true_slope) + true_intercept + np.random.normal(0, 100, m)
 
 X[:,0] = 1.
 X[:,1] = x_axis
 
 alpha = .0001
 theta = np.array([2., 17.])
-iterations = 100000
+iterations = 100
 error = np.zeros(iterations)
 grads = np.zeros((2, iterations))
 grits = np.zeros((2, iterations))
